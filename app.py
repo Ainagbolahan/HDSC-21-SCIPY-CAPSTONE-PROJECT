@@ -81,7 +81,8 @@ def main():
       
     # when 'Predict' is clicked, make the prediction and store it 
     if st.button("Predict"):
-        result = prediction
+        result = prediction = classifier.predict([ 
+        Name, Platform, Year, Genre, Publisher])
         st.success('Sales should be {}'.format(result))
         
      
