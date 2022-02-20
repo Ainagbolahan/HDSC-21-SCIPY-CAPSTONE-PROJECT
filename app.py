@@ -82,7 +82,7 @@ def main():
     # when 'Predict' is clicked, make the prediction and store it 
     if st.button("Predict"):
         result = prediction
-        st.success('Sales should be {}'.result)
+        st.success('Sales should be {}'.[result])
         
      
 if __name__=='__main__': 
