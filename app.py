@@ -55,7 +55,7 @@ def prediction(Name, Platform, Year, Genre, Publisher):
      
     output = round(prediction, 2)
 
-    return 'Sales should be $ {}'.format(output)
+    return 'Sales should be $ {output}'.format(output)
 
       
   
@@ -82,7 +82,7 @@ def main():
     # when 'Predict' is clicked, make the prediction and store it 
     if st.button("Predict"):
         result = prediction
-        st.success('Sales should be {}'.format(result))
+        st.success('Sales should be {result}'.format(result))
         
      
 if __name__=='__main__': 
