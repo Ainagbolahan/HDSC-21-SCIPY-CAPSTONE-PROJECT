@@ -81,11 +81,6 @@ def main():
       
     # when 'Predict' is clicked, make the prediction and store it 
     if st.button("Predict"):
-        Name = encoder.fit_transform([[Name]])
-        Platform = encoder.fit_transform([[Platform]])
-        Genre = encoder.fit_transform([[Genre]])
-        Publisher = encoder.fit_transform([[Publisher]])
-       
         result = prediction
         st.success('Sales should be {}'.format(result))
         
