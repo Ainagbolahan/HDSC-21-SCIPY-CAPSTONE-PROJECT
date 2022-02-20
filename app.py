@@ -78,10 +78,10 @@ def main(prediction):
     Genre = st.text_input("Genre")
     Publisher = st.text_input("Publisher")
     result =""
-    output = round(prediction, 2)
+    
     # when 'Predict' is clicked, make the prediction and store it 
     if st.button("Predict"):
-        result = output
+        result = prediction (Name, Platform, Year, Genre, Publisher)
         st.success('Sales should be {}'.format(result))
         
         
