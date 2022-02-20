@@ -60,7 +60,7 @@ def prediction(Name, Platform, Year, Genre, Publisher):
       
   
 # this is the main function in which we define our webpage  
-def main():       
+def main(prediction):       
     # front end elements of the web page 
     html_temp = """ 
     <div style ="background-color:blue;padding:13px"> 
