@@ -50,8 +50,8 @@ def prediction(Name, Platform, Year, Genre, Publisher):
     
     
     # Making predictions 
-    prediction = classifier.predict(dftype=float, [ 
-        Name, Platform, Year, Genre, Publisher])
+    prediction = classifier.predict([ 
+        Name, Platform, Year, Genre, Publisher], dtype="")
      
     output = round(prediction, 2)
 
