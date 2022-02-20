@@ -83,7 +83,7 @@ def main():
     if st.button("Predict"):
      prediction = classifier.predict([ 
         Name, Platform, Year, Genre, Publisher])
-        result = prediction
+     result = prediction
         st.success('Sales should be {}'.format(result))
         
      
