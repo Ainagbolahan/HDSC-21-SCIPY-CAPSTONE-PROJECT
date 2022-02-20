@@ -85,8 +85,7 @@ def main():
         Platform = encoder.fit_transform([[Platform]])
         Genre = encoder.fit_transform([[Genre]])
         Publisher = encoder.fit_transform([[Publisher]])
-        prediction = classifier.predict([[ 
-        Name, Platform, Year, Genre, Publisher]])
+       
         result = prediction
         st.success('Sales should be {}'.format(result))
         
