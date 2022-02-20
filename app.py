@@ -82,7 +82,7 @@ def main(prediction):
     # when 'Predict' is clicked, make the prediction and store it 
     if st.button("Predict"):
         result = prediction
-        st.success('Sales should be {}'.format(result))
+        
         return result
         
      
