@@ -87,7 +87,7 @@ def main(prediction, output):
         
      
 if __name__=='__main__': 
-    main(prediction)
+    main(prediction, output)
 
 
 # In[ ]:
