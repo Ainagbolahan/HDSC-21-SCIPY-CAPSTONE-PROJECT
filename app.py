@@ -8,8 +8,8 @@
 from IPython import get_ipython
 import pickle
 import streamlit as st
-from sklearn.preprocessing import OrdinalEncoder
-encoder = OrdinalEncoder()
+from sklearn.preprocessing import OneHotEncoder
+encoder = OneHotEncoder()
  
 # loading the trained model
 pickle_in = open('model.pkl', 'rb') 
