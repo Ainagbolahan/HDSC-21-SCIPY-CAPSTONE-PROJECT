@@ -60,7 +60,7 @@ def prediction(Name, Platform, Year, Genre, Publisher):
       
   
 # this is the main function in which we define our webpage  
-def main(prediction, output):       
+def main(prediction):       
     # front end elements of the web page 
     html_temp = """ 
     <div style ="background-color:blue;padding:13px"> 
@@ -78,7 +78,7 @@ def main(prediction, output):
     Genre = st.text_input("Genre")
     Publisher = st.text_input("Publisher")
     result =""
-      
+    output = round(prediction, 2)
     # when 'Predict' is clicked, make the prediction and store it 
     if st.button("Predict"):
         result = output
@@ -87,7 +87,7 @@ def main(prediction, output):
         
      
 if __name__=='__main__': 
-    main(prediction, output)
+    main(prediction)
 
 
 # In[ ]:
