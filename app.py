@@ -22,7 +22,7 @@ def prediction(Name, Platform, Year, Genre, Publisher):
  
     # Pre-processing user input    
     if Name != "":
-        Name = encoder.fit_transform(Name).reshape(-1, 1)
+        Name = encoder.fit_transform([[Name]]).reshape(-1, 1)
         
     else:
         Name = 0
@@ -50,8 +50,8 @@ def prediction(Name, Platform, Year, Genre, Publisher):
     
     
     # Making predictions 
-    prediction = classifier.predict([[ 
-        Name, Platform, Year, Genre, Publisher]])
+    prediction = classifier.predict([ 
+        Name, Platform, Year, Genre, Publisher])
      
     output = round(prediction, 2)
 
