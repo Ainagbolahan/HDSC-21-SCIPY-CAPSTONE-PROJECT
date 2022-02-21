@@ -53,7 +53,7 @@ def prediction(Name, Platform, Year, Genre, Publisher):
     # Making predictions 
     prediction = classifier.predict(X)
      
-    output = round(prediction, 2)
+    output = prediction
 
     return 'Sales should be $ {}'.format(output)
 
