@@ -78,40 +78,10 @@ def main(prediction):
     Genre = st.text_input("Genre")
     Publisher = st.text_input("Publisher")
     result =""
-    
-        # Pre-processing user input    
-    if Name != "":
-        Name = encoder.fit_transform([[Name]]).reshape(-1, 1)
-        
-    else:
-        Name = 0
-     
-    if Platform != "":
-        Platform = encoder.fit_transform([[Platform]]).reshape(-1, 1)
-        
-    else:
-        Platform = 0
-        
-    if Year != "":
-        Year = encoder.fit_transform([[Year]])
-    else:
-        Year = 0
-        
-    if Genre != "":
-        Genre = encoder.fit_transform([[Genre]]).reshape(-1, 1)
-    else:
-        Genre = 0
-        
-    if Publisher != "":
-        Publisher = encoder.fit_transform([[Publisher]]).reshape(-1, 1)
-    else:
-        Publisher = 0
       
     # when 'Predict' is clicked, make the prediction and store it 
     if st.button("Predict"):
-        prediction = classifier.predict([ 
-        Name, Platform, Year, Genre, Publisher])
-        result = prediction
+        result = prediction ([Name, Platform, Year, Genre, Publisher])
         st.success('Sales should be {}'.format(result))
         
         
