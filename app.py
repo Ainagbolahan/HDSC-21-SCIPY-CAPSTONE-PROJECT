@@ -50,8 +50,7 @@ def prediction(Name, Platform, Year, Genre, Publisher):
     
     
     # Making predictions 
-    prediction = classifier.predict( 
-        Name, Platform, Year, Genre, Publisher)
+    prediction = classifier.predict(X)
      
     output = round(prediction, 2)
 
