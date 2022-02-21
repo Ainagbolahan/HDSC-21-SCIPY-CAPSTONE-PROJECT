@@ -20,7 +20,7 @@ classifier = pickle.load(pickle_in)
   
 # defining the function which will make the prediction using the data which the user inputs 
 def prediction(Name, Platform, Year, Genre, Publisher):   
-    X = pd.DataFrame([[Name, Platform, Year, Genre, Publisher]], columns=['Name', 'Platform','Year','Genre','Publisher'], axis = 1)
+    X = pd.DataFrame([[Name, Platform, Year, Genre, Publisher]], columns=['Name', 'Platform','Year','Genre','Publisher'])
     # Pre-processing user input    
     if Name != "":
         Name = encoder.fit_transform([[Name]]).reshape(-1, 1)
