@@ -22,29 +22,29 @@ def prediction(Name, Platform, Year, Genre, Publisher):
  
     # Pre-processing user input    
     if Name != "":
-        Name = encoder.fit_transform([[Name]]).reshape(-1, 1)
+        Name = encoder.fit_transform(Name).reshape(-1, 1)
         
     else:
         Name = 0
      
     if Platform != "":
-        Platform = encoder.fit_transform([[Platform]]).reshape(-1, 1)
+        Platform = encoder.fit_transform(Platform).reshape(-1, 1)
         
     else:
         Platform = 0
         
     if Year != "":
-        Year = encoder.fit_transform([[Year]])
+        Year = encoder.fit_transform(Year)
     else:
         Year = 0
         
     if Genre != "":
-        Genre = encoder.fit_transform([[Genre]]).reshape(-1, 1)
+        Genre = encoder.fit_transform(Genre).reshape(-1, 1)
     else:
         Genre = 0
         
     if Publisher != "":
-        Publisher = encoder.fit_transform([[Publisher]]).reshape(-1, 1)
+        Publisher = encoder.fit_transform(Publisher).reshape(-1, 1)
     else:
         Publisher = 0
     
