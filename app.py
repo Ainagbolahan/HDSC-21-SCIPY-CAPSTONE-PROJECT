@@ -49,7 +49,7 @@ def prediction(Name, Platform, Year, Genre, Publisher):
     else:
         Publisher = 0
     
-    
+    X=encoder.fit_transform(X)
     # Making predictions 
     prediction = classifier.predict(X)
      
@@ -81,7 +81,7 @@ def main(prediction):
       
     # when 'Predict' is clicked, make the prediction and store it 
     if st.button("Predict"):
-        result = prediction (Name, Platform, Year, Genre, Publisher)
+        result = prediction
         st.success('Sales should be {}'.format(result))
         
         
