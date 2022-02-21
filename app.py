@@ -57,7 +57,7 @@ def prediction(Name, Platform, Year, Genre, Publisher):
         Publisher = 0
     
     # Making predictions 
-    prediction = classifier.predict(X)
+    prediction = classifier.predict(X)[0]
      
     output = prediction
 
