@@ -6,6 +6,7 @@
 
 
 from IPython import get_ipython
+import pandas as pd
 import pickle
 import streamlit as st
 from sklearn.preprocessing import OneHotEncoder
@@ -19,7 +20,7 @@ classifier = pickle.load(pickle_in)
   
 # defining the function which will make the prediction using the data which the user inputs 
 def prediction(Name, Platform, Year, Genre, Publisher):   
- 
+    X = pd.DataFrame.drop(columns=['Global_Sales', 'Rank','NA_Sales','EU_Sales','JP_Sales','Other_Sales'], axis = 1)
     # Pre-processing user input    
     if Name != "":
         Name = encoder.fit_transform([[Name]]).reshape(-1, 1)
