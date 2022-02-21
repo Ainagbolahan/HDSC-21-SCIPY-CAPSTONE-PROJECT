@@ -33,10 +33,10 @@ def prediction(Name, Platform, Year, Genre, Publisher):
     else:
         Platform = 0
         
-    '''if Year != "":
+    if Year != "":
         Year = encoder.fit_transform(Year)
     else:
-        Year = 0'''
+        Year = 0
         
     if Genre != "":
         Genre = encoder.fit_transform([[Genre]]).reshape(-1, 1)
