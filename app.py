@@ -53,8 +53,6 @@ def prediction(Name, Platform, Year, Genre, Publisher):
        # put inputs into the dataframe
     X = pd.DataFrame([[Name, Platform, Year, Genre, Publisher]], columns=['Name', 'Platform','Year','Genre','Publisher'])
     
-    #preprocessing feature variable
-    X = encoder.fit_transform(X)
     
     # Making predictions 
     prediction = classifier.predict(X)[0]
