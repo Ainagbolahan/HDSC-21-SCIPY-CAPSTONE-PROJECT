@@ -19,8 +19,12 @@ classifier = pickle.load(pickle_in)
 @st.cache()
   
 # defining the function which will make the prediction using the data which the user inputs 
-def prediction(Name, Platform, Year, Genre, Publisher):   
-
+def prediction(Name, Platform, Year, Genre, Publisher):
+    # put inputs into the dataframe
+    X = pd.DataFrame([[Name, Platform, Year, Genre, Publisher]], columns=['Name', 'Platform','Year','Genre','Publisher'])
+    
+    #preprocessing feature variable
+    X = encoder.fit_transform(X)
  
     # Pre-processing user input    
     if Name != "":
@@ -49,9 +53,6 @@ def prediction(Name, Platform, Year, Genre, Publisher):
         Publisher = encoder.fit_transform([[Publisher]]).reshape(-1, 1)
     else:
         Publisher = 0
-    
-       # put inputs into the dataframe
-    X = pd.DataFrame([[Name, Platform, Year, Genre, Publisher]], columns=['Name', 'Platform','Year','Genre','Publisher'])
     
     
     # Making predictions 
